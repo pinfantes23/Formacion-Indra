@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div class="container">
+
+    <h1>Contactos: </h1>
+    <br>
+
+     <tr th:each="c : ${lista}">
+         <td th:text="${c.nombre}"></td>
+         <td th:text="${c.apellido}"></td>
+         <td th:text="${c.numeroTelefono}"></td>
+        </br>
+     </tr>
+
+	<a class="btn btn-primary"
+			th:href="@{/}" role="button">Volver</a>
+  
+</div>
+</body>
+</html>

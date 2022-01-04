@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+	<body>
+		<div class="container">
+   
+			<h1>
+        		Introduce login y pass:
+    		</h1>
+    		 <form  th:action="${/user}" th:object="${login}"  method="post"">	        
+			  	<label>Login:</label>
+	            <input type="text" id="login" name="login"  />
+	     		</br>
+	     		</br>
+	            <label>Pass: </label>
+	            <input type="text" id="pass" name="pass"  />
+	            
+	  			</br>
+	  			</br>
+	      	  <input type="submit" value="Comprobamos Login"/>
+ 			</form>
+		</div>
+	</body>
+</html>

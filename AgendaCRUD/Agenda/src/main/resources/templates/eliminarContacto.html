@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1>Eliminar Contacto</h1>
+	<br>
+	<tr th:each="c : ${lista}">
+		<td th:text="${c.nombre}"></td>
+		<td th:text="${c.apellido}"></td>
+		<td th:text="${c.numeroTelefono}"></td>
+		
+		<td><a class="btn btn-primary"
+			th:href="@{/eliminoContacto/__${c.id}__}" role="button">Delete</a>
+		</td>
+		</br>
+	</tr>
+</body>
+</html>

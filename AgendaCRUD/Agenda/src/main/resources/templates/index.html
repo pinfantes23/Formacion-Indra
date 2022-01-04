@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+xmlns:sec="http://www.thymeleaf.org/exxtras/spring-security">
+	<body>
+		<div class="container">
+   
+			<h1>
+        		AGENDA CRUD
+    		</h1>
+    			
+    			<li sec:authorize="!isAuthenticated()">
+	    			<h3>Lista de Contactos <a th:href="@{/list}">ver</a></h3>
+	    			<h3>Agregar nuevo Contactos <a th:href="@{/addContacto}">add</a></h3>
+					<h3>Modificar Contacto <a th:href="@{/updateContacto}">modificar</a></h3>
+					<h3>Eliminar Contacto <a th:href="@{/deleteContacto}">delete</a></h3>
+				</li>
+		</div>
+	</body>
+</html>

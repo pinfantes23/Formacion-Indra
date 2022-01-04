@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<body>
+<div class="container">
+    <h1>
+      CONTACTOS
+    </h1>
+
+    <form  th:object="${modificoContacto}"  method="post" th:action="@{/guardaUpdateContacto}">
+
+        <input type="hidden" th:field="*{id}"/>
+
+            <label>Nombre</label>
+            <input th:field="*{nombre}" type="text" class="form-control"  />
+     		</br>
+     		</br>
+            <label>Apellido</label>
+            <input type="text" class="form-control" th:field="*{apellido}" />
+            </br>
+            </br>
+             <label>Numero Telefono</label>
+            <input type="text" class="form-control" th:field="*{numeroTelefono}" />
+  			</br>
+  			</br>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+ 
+
+
+</div>
+</body>
+</html>
